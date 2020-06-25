@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import {Link} from 'react-router-dom';
+
 import IPokemon from '../../interfaces/IPokemon';
 import api from '../../services/api';
 
@@ -23,7 +25,11 @@ const Pokemons: React.FC = () => {
     <ul>
       { 
         pokemons && pokemons.map(pokemon => (
-          <li key={pokemon.name}>{ pokemon.name }</li>
+          <li key={pokemon.name}>
+            <Link to={`/pokemon/${pokemon.name}`}>
+              { pokemon.name }
+            </Link>
+          </li>
         )) 
       }
     </ul>

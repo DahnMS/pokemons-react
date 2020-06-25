@@ -1,16 +1,6 @@
 import React from 'react';
+import Routes from './routes'
 
-import Header from './components/Header';
-
-import Pokemons from './pages/Pokemons';
-
-const App: React.FC = () => {
-  return (
-    <>
-      <Header title="Meus Pokemons" />
-      <Pokemons />
-    </>
-  );
-}
+const App: React.FC = () =>  (<Routes/>);
 
 export default App;
